@@ -1,6 +1,6 @@
 # Brief Explanation.
 
-This API has been designed with the database primary key on the record number for autoincrement as **Create** is done at the client end <br>
+This API has been designed with the database primary key on the record number for autoincrement as **Create** is done at the client end 
 hence lawyers can make entries with no error response of duplicate entry for a desgin based on employeeIDs primary key.<br>
 *Multiple timesheets or records created by a lawyer.*
 
@@ -86,8 +86,8 @@ record_number *Integer*<br>
 http://localhost/delete-timesheet?employeeID=1&record_number=2
 
 ## Generate-Invoice<br>
-Finance team generate invoice for each client or company.<br>
 **HTTP METHOD := GET** <br>
+Finance team generate invoice for each client or company.<br>
 **Query Params:**<br>
 company *String*<br>
 **Endpoint:**
