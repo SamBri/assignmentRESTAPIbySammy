@@ -23,7 +23,7 @@ hence lawyers can make entries with no error response of duplicate entry for a d
 
 ## Run App <br>
 1. Enter the terminal: ( Ctrl + Alt + T)
-2. Run command: python3 filename.py
+2. Run command: python3 app.py
 
 ## NOTE:<br>
 Test API endpoints with the tool Postman(prefered) / cURL / Chrome Developer tools <br>
