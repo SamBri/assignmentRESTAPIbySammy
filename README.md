@@ -35,12 +35,12 @@ Test API endpoints with the tool Postman(prefered) / cURL / Chrome Developer too
 **form-data** HTTP Request is friendly with Postman.
 
 # API Docs
-
+port-number = 5000, Flask development mode port<br>
  ## C: Create<br>
  **HTTP METHOD := POST**<br>
  A lawyer can create multiple timesheets(records) on PROMPT<br>
  **Endpoint:**
- http://localhost/create-timesheet<br>
+ http://localhost:port-number/create-timesheet<br>
  **Body:**<br>
  **form-data:**<br>
  {<br>
@@ -60,7 +60,20 @@ A lawyer can read or view timesheet(s) <br>
 **Query Params:**<br>
 employeeID *Integer*<br>
 **Endpoint:**
-http://localhost/view-timesheet?employeeID=2
+http://localhost/:port-number/view-timesheet?employeeID=2<br>
+**Response format:**<br>
+[
+{
+ employeeID *Integer* <br>
+ billableRate *Integer* <br>
+ company *String* <br>
+ date *Text* <br>
+ startTime *Text* <br>
+ endTime *Text* <br>
+ }, ...to the Nth Dictionary
+ ]
+ 
+
 
 ## U: Update<br>
 **HTTP METHOD := PUT** <br>
@@ -69,7 +82,7 @@ A lawyer can update timesheet entries/form-data <br>
 employeeID *Integer*<br>
 record_number *Integer*<br>
 **Endpoint:**
-http://localhost/update-timesheet?employeeID=1&record_number=2<br>
+http://localhost:port-number/update-timesheet?employeeID=1&record_number=2<br>
 **Body:**<br>
  **form-data:**<br>
  {<br>
@@ -78,7 +91,7 @@ http://localhost/update-timesheet?employeeID=1&record_number=2<br>
  date *Text* <br>
  startTime *Text* <br>
  endTime *Text* <br>
- }
+ }<br>
 
 
 ## D: Delete <br>
@@ -88,7 +101,7 @@ A lawyer can delete timesheet(s)<br>
 employeeID *Integer*<br>
 record_number *Integer*<br>
 **Endpoint:**
-http://localhost/delete-timesheet?employeeID=1&record_number=2
+http://localhost:port-number/delete-timesheet?employeeID=1&record_number=2
 
 ## Generate-Invoice<br>
 **HTTP METHOD := GET** <br>
@@ -96,9 +109,29 @@ Finance team generate invoice for each client or company.<br>
 **Query Params:**<br>
 company *String*<br>
 **Endpoint:**
-http://localhost/generate-invoice?company=entercompanyhere<br>
-*entercompanyhere = Arch Services, Power, MTN, Tigo, Ecobank*
-
+http://localhost:port-number/generate-invoice?company=entercompanyhere<br>
+*entercompanyhere = Arch Services, Power, MTN, Tigo, Ecobank*<br>
+**Response format:**<br>
+{<br>
+    "1": {<br>
+        "Company": *String*<br>
+    },<br>
+    "2": {<br>
+        "EmployeeIDs": [*integers*]<br>
+    },<br>
+    "3": {<br>
+        "NumberOfHours": [*integers*]<br>
+    },<br>
+    "4": {<br>
+        "UnitPrice": [*integers*]<br>
+    },<br>
+    "5": {<br>
+        "Cost": [*integers*]<br>
+    },<br>
+    "6": {<br>
+        "Total": *integer*<br>
+    }<br>
+}
 
 
 
