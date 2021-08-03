@@ -1,16 +1,18 @@
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
-# app to assist lawyers with biller rate .
-# written with love by Sammy or Samuel Brifo
+# This a Billable Rate System for Quantum Legal Firm for their lawyers to Create timesheets,
+# View, Update and Delete timesheets.
+# Also has a functionality for the finance department to generate invoice.
+
 # Date started: 30th July 2021.
 # Date ended: 3rd August 2021.
+# written with love by Sammy or Samuel Brifo
+
+
 
 # let's connect to the web over http = [POST,GET, PUT, DELETE] with the help of a friend FLASK
-import json
-import re
-
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 import os
+import json
 
 # @@DONE: TODO: config app to talk with database to hold data for client submission
 project_dir = os.path.dirname(os.path.abspath(__file__))
@@ -230,7 +232,7 @@ def generateInvoice():
         "6": {"Total": totalCost}
     }
 
-    return invoice
+    return invoice # invoice generated is ready.
 
 
 # run flask app
