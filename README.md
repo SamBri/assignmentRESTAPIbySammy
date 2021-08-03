@@ -3,7 +3,12 @@
 This API has been designed with the database primary key on the record number for autoincrement as **Create** is done at the client end 
 hence lawyers can make entries with no error response of duplicate entry for a desgin based on employeeIDs primary key.<br><br>
 *Multiple timesheets or records created by a lawyer.*
-
+## A Typical Scenario:
+Lawyer Nti with employeeID(he knows of. eg. 18) has a clientele base of MTN, AirtelTigo & Vodafone<br>
+1. He Creates a timesheet for each client<br>
+2. He Views timesheets created with his employeeID<br>
+3. He Updates timesheets using his employeeID and record_number; the following fields, Billable Rate, Date, Start Time, End Time etc.<br>
+4. He Deletes timesheets with his employeeID and the exact timesheet i.e record_number he wants to delete<br>
 # App Prepworks <br>
 **Server-Side package:**<br>
 **Database:** sqlite, comes pre-installed on ubuntu<br>
