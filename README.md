@@ -1,7 +1,7 @@
 # Brief Explanation.
 
 This API has been designed with the database primary key on the record number for autoincrement as **Create** is done at the client end 
-hence lawyers can make entries with no error response of duplicate entry for a desgin based on employeeIDs primary key.<br>
+hence lawyers can make entries with no error response of duplicate entry for a desgin based on employeeIDs primary key.<br><br>
 *Multiple timesheets or records created by a lawyer.*
 
 # App Prepworks <br>
@@ -59,7 +59,7 @@ http://localhost/view-timesheet?employeeID=2
 
 ## U: Update<br>
 **HTTP METHOD := PUT** <br>
-A lawyer can update timesheet <br>
+A lawyer can update timesheet entries. <br>
 **Query Params:**<br>
 employeeID *Integer*<br>
 record_number *Integer*<br>
