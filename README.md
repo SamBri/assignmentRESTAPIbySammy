@@ -6,9 +6,9 @@ hence lawyers can make entries with no error response of duplicate entry for a d
 
 # App Prepworks <br>
 **Server-Side package:**<br>
-Database: sqlite, comes pre-installed on ubuntu<br>
-ORM: pip install -U Flask-SQLAlchemy<br>
-Web Framework: pip install Flask<br>
+**Database:** sqlite, comes pre-installed on ubuntu<br>
+**ORM:** pip install -U Flask-SQLAlchemy<br>
+**Web Framework:** pip install Flask<br>
 
 **Database setup:**<br>
 1. Enter the terminal: ( Ctrl + Alt + T)
@@ -59,7 +59,7 @@ http://localhost/view-timesheet?employeeID=2
 
 ## U: Update<br>
 **HTTP METHOD := PUT** <br>
-A lawyer can update timesheet entries. <br>
+A lawyer can update timesheet entries/form-data <br>
 **Query Params:**<br>
 employeeID *Integer*<br>
 record_number *Integer*<br>
